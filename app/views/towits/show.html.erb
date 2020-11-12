@@ -1,0 +1,11 @@
+<body>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @towit.content %>
+</p>
+
+<%= link_to 'Edit', edit_towit_path(@towit) %> |
+<%= link_to 'Back', towits_path %>
+</body>

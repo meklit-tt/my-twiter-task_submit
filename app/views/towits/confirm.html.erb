@@ -1,0 +1,10 @@
+<body class= "body">
+<h3>Send with the following Content</h3>
+
+<%= form_with(model: @towit, url: towits_path, local: true) do |form| %>
+    <%= form.hidden_field :content %>
+
+    <p>Body:<%= @towit.content %></p>
+  <%= form.submit  "Submit" %>
+<% end %>
+</body>

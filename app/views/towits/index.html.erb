@@ -1,0 +1,48 @@
+<body class= "body">
+  <p><%= notice %></p>
+    <%= stylesheet_link_tag "towits" %>
+    <%= stylesheet_link_tag "normalize" %>
+    <header class= "header">
+    <p class= "logo"><%= image_tag("logoo.png") %> </p>
+    </header>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @towits.each do |towit| %>
+      <tr>
+        <td><%= towit.content %></td>
+      </tr>
+      <br>
+      <tr>
+        <td ><%= link_to 'Show', towit %></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Edit', edit_towit_path(towit) %></td>
+      </tr>
+        <td><%= link_to 'Delete', towit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <br>
+     <td  width="20%" valign="left" bgcolor="pink"> <%= link_to 'Post a new towit', new_towit_path  %> </td>
+  </tbody>
+</table>
+
+<br>
+<footer>
+<p class="left">© 2020 Copyright</p>
+  <ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <li a href="#" class="fa fa-facebook"></li></a>
+    <li a href="#" class="fa fa-twitter"></li></a>
+    <li a href="#" class="fa fa-youtube"></li></a>
+    <li a href="#" class="fa fa-linkedin"></li></a>
+  </ul>
+</footer>
+</body>
